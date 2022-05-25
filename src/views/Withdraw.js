@@ -29,11 +29,11 @@ const Withdraw = () => {
         travelABI,
         "0x90FC49093e0680441d66b64d164593F40E858275"
       );
+      console.log(address[0]);
       await contract.methods
         .withdraw()
         .send({
           from: address[0],
-          value: "0",
         })
         .then((res) => {
           toast("Success!");
